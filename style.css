@@ -1,0 +1,195 @@
+:root {
+  --primary-color: #ececec;
+  --secondary-color: #151515;
+  --blue-color: #2bc5cd;
+  --orange-color: #ff693d;
+  --border: 0.18vw solid var(--blue-color);
+  --spacing: 2vw;
+  --spacing-mobile: 4vw;
+  --zoom-font-offset: 0rem; /* Adjust this value to zoom in or out */
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+  font-family: var(--font-family, Arial, Helvetica, sans-serif);
+  margin: 0;
+  box-sizing: border-box;
+}
+
+main,
+header,
+section,
+footer {
+  background: #fff;
+  /* border-radius: 0.9vw; */
+  box-sizing: border-box;
+}
+
+img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  object-position: top;
+}
+
+.grid-container {
+  display: grid;
+  gap: var(--spacing);
+  margin: 0 auto;
+  background: var(--primary-color);
+
+  padding: var(--spacing);
+  box-sizing: border-box;
+
+  background-color: #ebebeb;
+}
+
+header {
+  background: var(--blue-color);
+  color: #fff;
+  padding: var(--spacing);
+  display: grid;
+  grid-area: header;
+  min-height: 28vw;
+}
+
+header h1 {
+  margin: 0 0 1.8vw 0;
+  font-size: clamp(1rem, 1.8vw + var(--zoom-font-offset), 14rem);
+  font-weight: bold;
+  letter-spacing: 0.08vw;
+  text-transform: uppercase;
+}
+
+header p {
+  margin: 0;
+  font-size: clamp(1rem, 1vw + var(--zoom-font-offset), 14rem);
+}
+
+.school {
+  grid-area: school;
+}
+.student {
+  grid-area: student;
+}
+.time {
+  grid-area: time;
+}
+.alumni {
+  grid-area: alumni;
+}
+main {
+  grid-area: main;
+  display: grid;
+  align-items: center;
+  justify-content: center;
+  border: var(--border);
+  background: #f7f7f7;
+  min-height: 13vw;
+}
+main h2 {
+  color: var(--blue-color);
+  text-align: center;
+  font-size: clamp(1rem, 1.8vw + var(--zoom-font-offset), 14rem);
+  margin: 0;
+  font-weight: bold;
+  text-transform: uppercase;
+  padding: 1.8vw;
+}
+
+footer {
+  grid-area: footer;
+  background: var(--orange-color);
+  color: #fff;
+  padding: var(--spacing);
+  padding-bottom: 1vw;
+}
+
+footer h3 {
+  margin: 0 0 0.9vw 0;
+  font-weight: bold;
+  font-size: clamp(1rem, 1.2vw + var(--zoom-font-offset), 14rem);
+}
+
+footer p {
+  margin: 0 0 1.8vw 0;
+  font-size: clamp(1rem, 1vw + var(--zoom-font-offset), 14rem);
+}
+
+footer button {
+  background: #fff;
+  color: var(--secondary-color);
+  border: none;
+  padding: 1.4vw 4vw;
+  font-weight: bold;
+  cursor: pointer;
+  width: fit-content;
+  font-size: clamp(1rem, 1vw + var(--zoom-font-offset), 14rem);
+  text-transform: uppercase;
+}
+
+/* Desktop grid */
+@media (min-width: 1024px) {
+  .grid-container {
+    display: grid;
+    grid-template-areas:
+      "header school student"
+      "header main time"
+      "alumni footer footer";
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    gap: var(--spacing);
+    border-radius: 4vw;
+    background-color: #ebebeb;
+    max-width: 97vw;
+    margin-top: 1vw;
+  }
+  header {
+    min-height: 100%;
+  }
+  .school,
+  .student,
+  .time,
+  .alumni {
+    height: 20vw;
+    background: none;
+    padding: 0;
+  }
+}
+
+/* Mobile grid */
+@media (max-width: 1023px) {
+  .grid-container {
+    display: grid;
+    grid-template-areas:
+      "header"
+      "school"
+      "student"
+      "main"
+      "time"
+      "alumni"
+      "footer";
+    grid-template-columns: 1fr;
+    gap: var(--spacing-mobile);
+    padding: var(--spacing-mobile);
+    max-width: 90vw;
+    border-radius: 7vw;
+  }
+  header,
+  .school,
+  .student,
+  .time,
+  .alumni,
+  main,
+  footer {
+    height: 59vw;
+  }
+  header h1,
+  main h2,
+  footer h3,
+  footer p,
+  footer button {
+    font-size: clamp(1rem, 3vw + var(--zoom-font-offset), 14rem);
+  }
+}
