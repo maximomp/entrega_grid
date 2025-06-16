@@ -198,11 +198,11 @@ This project consists of a web mockup based on **CSS Grid**, following best prac
 
 ## Mobile Example
 
-![Mobile version example](./media/img/mobile_example.png)
+![Mobile version example](./media/img/mobile-example.png)
 
 ## Desktop Example
 
-![Desktop version example](./media/img/desktop_example.png)
+![Desktop version example](./media/img/desktop-example.png)
 
 ---
 
