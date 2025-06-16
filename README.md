@@ -93,11 +93,11 @@ Este proyecto consiste en una maqueta web basada en **CSS Grid** siguiendo buena
 
 ## Ejemplo de resultado en móvil
 
-![Ejemplo versión móvil](./media/img/mobile_example.png)
+![Ejemplo versión móvil](./media/img/mobile-example.png)
 
 ## Ejemplo de resultado en escritorio
 
-![Ejemplo versión escritorio](./media/img/desktop_example.png)
+![Ejemplo versión escritorio](./media/img/desktop-example.png)
 
 ---
 
