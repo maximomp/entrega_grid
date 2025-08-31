@@ -6,6 +6,7 @@
   --border: 0.18vw solid var(--blue-color);
   --spacing: 2vw;
   --spacing-mobile: 4vw;
+
   --zoom-font-offset: 0rem; /* Adjust this value to zoom in or out */
   font-family: Arial, Helvetica, sans-serif;
 }
@@ -43,6 +44,7 @@ img {
   box-sizing: border-box;
 
   background-color: #ebebeb;
+  min-width: 360px;
 }
 
 header {
@@ -145,9 +147,7 @@ footer button {
     max-width: 97vw;
     margin-top: 1vw;
   }
-  header {
-    min-height: 100%;
-  }
+
   .school,
   .student,
   .time,
@@ -185,11 +185,39 @@ footer button {
   footer {
     height: 59vw;
   }
-  header h1,
-  main h2,
-  footer h3,
+  footer {
+    padding: var(--spacing-mobile);
+  }
+  header {
+    height: 120vw;
+    padding: var(--spacing-mobile);
+  }
+
   footer p,
+  header p,
   footer button {
-    font-size: clamp(1rem, 3vw + var(--zoom-font-offset), 14rem);
+    font-size: clamp(0.5rem, 3vw + var(--zoom-font-offset), 14rem);
+  }
+  header h1 {
+    font-size: clamp(1.4rem, 5.6vw + var(--zoom-font-offset), 14rem);
+  }
+  main h2,
+  footer h3 {
+    font-size: clamp(1rem, 4vw + var(--zoom-font-offset), 14rem);
+  }
+
+  h1 {
+    text-align: center;
+  }
+
+  footer button {
+    padding: clamp(1.5rem, 6vw + var(--zoom-font-offset), 14rem)
+      clamp(3rem, 12vw + var(--zoom-font-offset), 14rem);
+
+    margin-top: clamp(0.7rem, 2.1vw + var(--zoom-font-offset), 14rem);
+  }
+  footer h3 {
+    padding-bottom: clamp(1rem, 4vw + var(--zoom-font-offset), 14rem);
+    padding-top: clamp(0.7rem, 2.1vw + var(--zoom-font-offset), 14rem);
   }
 }
